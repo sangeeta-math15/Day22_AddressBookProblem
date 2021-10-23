@@ -32,4 +32,15 @@ public class NewAddressBook {
         System.out.println("The Contact Details of " + firstName + " "+lastName +"\n" + createContact);
 
     }
+
+    public Object editContact() {
+        CreateContact createContact=new CreateContact();
+        System.out.println("Enter the first name of the person");
+        String editName=sc.nextLine();
+        if(editName.equalsIgnoreCase(createContact.getFirstName())) {
+            addContact();
+        }
+
+        return editName;
+    }
 }

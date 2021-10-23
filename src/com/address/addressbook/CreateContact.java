@@ -75,6 +75,5 @@ public class CreateContact {
                         "email=" +email+'\''+
                         "zip=" +zip+'\''+
                         "phoneNumber=" +phoneNumber +'\'';
-
     }
 }

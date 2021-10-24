@@ -3,9 +3,10 @@ package com.address.addressbook;
 import java.util.Scanner;
 
 public class NewAddressBook {
+    CreateContact createContact=new CreateContact();
     Scanner sc=new Scanner(System.in);
     public void addContact(){
-        CreateContact createContact=new CreateContact();
+
         System.out.println("Enter First name");
         String firstName=sc.nextLine();
         System.out.println("Enter Last Name");
@@ -42,5 +43,14 @@ public class NewAddressBook {
         }
 
         return editName;
+    }
+
+    public void deleteContact() {
+        System.out.println("Enter firstname of the person");
+        String editName=sc.nextLine();
+        if(editName.equals(createContact.getFirstName())){
+            System.out.println("Deleted" +createContact.getFirstName() + "details");
+            createContact=null;
+        }
     }
 }
